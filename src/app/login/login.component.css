@@ -1,0 +1,24 @@
+.btn {
+  width: 100%;
+  margin-top: 2em;
+  border-radius: 30px;
+}
+
+.container-fluid {
+  width: 500px;
+  margin-top: 3em;
+}
+
+h2 {
+  margin-bottom: 1em;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.alert {
+  transition: 2s ease-in;
+}

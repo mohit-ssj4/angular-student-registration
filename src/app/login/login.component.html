@@ -1,1 +1,33 @@
-
+<div class="container-fluid">
+	<div class="alert alert-success" id="alert" role="alert" *ngIf="response">
+		Login Successful!
+	</div>
+	<div *ngIf="!response">
+		<h2>Login form</h2>
+		<form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+			<div class="form-row">
+				<div class="form-group col-md-12">
+					<label for="student_no">Student number</label>
+					<input type="number" class="form-control" id="student_no" name="student_no" [(ngModel)]="student_no" placeholder="Enter student number">
+        </div>
+			</div>
+			<div class="form-row">
+				<div class="form-group col-md-12">
+					<label for="password">Password</label>
+					<input type="password" class="form-control" id="password" name="password" [(ngModel)]="password" placeholder="Enter password">
+        </div>
+			</div>
+			<div class="form-row">
+				<div class="col-md-4">
+					&nbsp;
+				</div>
+				<div class="col-md-4">
+					<button type="submit" class="btn btn-primary">Login</button>
+				</div>
+				<div class="col-md-4">
+					&nbsp;
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
