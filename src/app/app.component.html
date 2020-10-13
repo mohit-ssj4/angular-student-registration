@@ -1,0 +1,7 @@
+<div class="container-fluid">
+  <button type="button" class="btn btn-primary" (click)="openLoginForm()">Login</button>
+  <button type="button" class="btn btn-secondary" (click)="openRegisterForm()">Register</button>
+</div>
+<hr>
+<app-login *ngIf="isLoginForm"></app-login>
+<app-register *ngIf="isRegisterForm"></app-register>
