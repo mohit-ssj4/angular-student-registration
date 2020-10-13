@@ -1,6 +1,7 @@
 .btn {
   width: 100%;
   margin-top: 2em;
+  border-radius: 30px;
 }
 
 .container-fluid {
@@ -16,4 +17,8 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.alert {
+  transition: 2s ease-in;
 }

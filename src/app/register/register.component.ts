@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { delay } from "rxjs/operators";
 import { BackendService } from "../backend.service";
 
 @Component({
@@ -26,5 +27,10 @@ export class RegisterComponent implements OnInit {
       this.response = res;
       data.reset();
     });
+  }
+
+  removeAlert() {
+    var element = document.getElementById('alert');
+    element.remove();
   }
 }
