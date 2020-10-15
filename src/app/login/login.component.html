@@ -1,13 +1,4 @@
 <div class="container-fluid">
-	<!-- Login success message starts here-->
-	<div class="alert alert-success" id="alert" role="alert" *ngIf="success">
-		Login Successful!
-		<button type="button" class="close" (click)="removeAlert()">
-      <span aria-hidden="true">&times;</span>
-    </button>
-	</div>
-	<!-- Login success message ends here -->
-
 	<!-- Invalid credentials starts here -->
 	<div class="alert alert-danger" id="alert" role="alert" *ngIf="failure">
 		Invalid Credentials. Please try again!
@@ -26,7 +17,7 @@
 	<!-- Loader ends here -->
 
 	<!-- Login form starts here -->
-	<div *ngIf="!displayLoader && !success">
+	<div *ngIf="!displayLoader">
 		<h2>Login form</h2>
 		<form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
 			<div class="form-row">

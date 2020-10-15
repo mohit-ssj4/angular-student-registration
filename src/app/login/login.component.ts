@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 import { BackendService } from "../backend.service";
 
 @Component({
@@ -7,13 +8,12 @@ import { BackendService } from "../backend.service";
   styleUrls: ["./login.component.css"]
 })
 export class LoginComponent implements OnInit {
-  constructor(private backend: BackendService) {}
+  constructor(private backend: BackendService, private router: Router) {}
 
   student_no: number;
   password: string;
   formData: any;
   displayLoader = false;
-  success = false;
   failure = false;
 
   ngOnInit() {}
@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
     this.backend.login(this.formData).subscribe(res => {
       this.displayLoader = false;
       if (res.status == 200) {
-        this.success = true;
+        this.router.navigateByUrl("/covid-table");
       } else {
         this.failure = true;
       }
