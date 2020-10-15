@@ -1,18 +1,24 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
+import { FormsModule } from "@angular/forms";
 
-import { AppComponent } from './app.component';
-import { HelloComponent } from './hello.component';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
-import { BackendService } from './backend.service';
-import { HttpClientModule } from '@angular/common/http';
+import { AppComponent } from "./app.component";
+import { HelloComponent } from "./hello.component";
+import { RegisterComponent } from "./register/register.component";
+import { BackendService } from "./backend.service";
+import { HttpClientModule } from "@angular/common/http";
+import { AppRoutingModule } from "./app-routing.module";
+import { LoginComponent } from "./login/login.component";
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, HttpClientModule ],
-  declarations: [ AppComponent, HelloComponent, LoginComponent, RegisterComponent ],
-  bootstrap:    [ AppComponent ],
+  imports: [BrowserModule, FormsModule, HttpClientModule, AppRoutingModule],
+  declarations: [
+    AppComponent,
+    HelloComponent,
+    RegisterComponent,
+    LoginComponent
+  ],
+  bootstrap: [AppComponent],
   providers: [BackendService]
 })
-export class AppModule { }
+export class AppModule {}
