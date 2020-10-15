@@ -22,3 +22,7 @@ input::-webkit-inner-spin-button {
 .alert {
   transition: 2s ease-in;
 }
+
+.close:hover {
+  color: red;
+}
