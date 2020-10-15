@@ -1,7 +1,6 @@
 <div class="container-fluid">
-  <button type="button" class="btn btn-primary" (click)="openLoginForm()">Login</button>
-  <button type="button" class="btn btn-secondary" (click)="openRegisterForm()">Register</button>
+	<button type="button" class="btn btn-primary" routerLink='/login'>Login</button>
+	<button type="button" class="btn btn-secondary" routerLink='/register'>Register</button>
 </div>
 <hr>
-<app-login *ngIf="isLoginForm"></app-login>
-<app-register *ngIf="isRegisterForm"></app-register>
+<router-outlet></router-outlet>
