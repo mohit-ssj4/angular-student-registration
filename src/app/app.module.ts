@@ -10,6 +10,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from "./app-routing.module";
 import { LoginComponent } from "./login/login.component";
 import { CovidTableComponent } from './covid-table/covid-table.component';
+import { LoaderComponent } from './loader/loader.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, HttpClientModule, AppRoutingModule],
@@ -18,7 +19,8 @@ import { CovidTableComponent } from './covid-table/covid-table.component';
     HelloComponent,
     RegisterComponent,
     LoginComponent,
-    CovidTableComponent
+    CovidTableComponent,
+    LoaderComponent
   ],
   bootstrap: [AppComponent],
   providers: [BackendService]

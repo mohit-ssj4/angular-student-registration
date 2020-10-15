@@ -22,12 +22,3 @@ input::-webkit-inner-spin-button {
 .alert {
   transition: 2s ease-in;
 }
-
-.spinner-border {
-  width: 4em;
-  height: 4em;
-}
-
-.d-flex {
-  margin-top: 13em;
-}

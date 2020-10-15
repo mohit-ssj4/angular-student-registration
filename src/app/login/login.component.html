@@ -9,11 +9,7 @@
 	<!-- Invalid credentials ends here -->
 
 	<!-- Loader starts here -->
-	<div class="d-flex justify-content-center" *ngIf="displayLoader">
-		<div class="spinner-border text-primary" role="status">
-			<span class="sr-only">Loading...</span>
-		</div>
-	</div>
+	<app-loader *ngIf="displayLoader"></app-loader>
 	<!-- Loader ends here -->
 
 	<!-- Login form starts here -->
