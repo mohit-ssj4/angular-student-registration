@@ -15,14 +15,12 @@ export class BackendService {
   loginUrl = "https://ionic-server-app.herokuapp.com/trainee/login";
 
   public register(formData): Observable<any> {
-    const options = new HttpHeaders({ "Content-Type": "application/json" });
-    return this.httpClient.post(this.registerUrl, formData, {
-      headers: options
-    });
+    return this.httpClient
+      .post(this.registerUrl, formData, { observe: "response" })
+      .pipe(catchError(this.handleError));
   }
 
   public login(formData): Observable<any> {
-    const options = new HttpHeaders({ "Content-Type": "application/json" });
     return this.httpClient
       .post(this.loginUrl, formData, { observe: "response" })
       .pipe(catchError(this.handleError));

@@ -18,19 +18,28 @@ export class RegisterComponent implements OnInit {
   password: string;
   response: any;
   formData: any;
+  displayLoader = false;
+  success = false;
+  failure = false;
 
   ngOnInit() {}
 
   register(data) {
     this.formData = data.value;
+    this.displayLoader = true;
     this.backend.register(this.formData).subscribe(res => {
-      this.response = res;
-      data.reset();
+      this.displayLoader = false;
+      if (res.status == 200) {
+        this.success = true;
+      } else {
+        this.failure = true;
+      }
     });
+    data.reset();
   }
 
   removeAlert() {
-    var element = document.getElementById('alert');
+    var element = document.getElementById("alert");
     element.remove();
   }
 }
