@@ -9,8 +9,8 @@ import { BackendService } from "./backend.service";
 import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from "./app-routing.module";
 import { LoginComponent } from "./login/login.component";
-import { CovidTableComponent } from './covid-table/covid-table.component';
-import { LoaderComponent } from './loader/loader.component';
+import { LoaderComponent } from "./loader/loader.component";
+import { CovidtableComponent } from "./covidtable/covidtable.component";
 
 @NgModule({
   imports: [BrowserModule, FormsModule, HttpClientModule, AppRoutingModule],
@@ -19,8 +19,8 @@ import { LoaderComponent } from './loader/loader.component';
     HelloComponent,
     RegisterComponent,
     LoginComponent,
-    CovidTableComponent,
-    LoaderComponent
+    LoaderComponent,
+    CovidtableComponent
   ],
   bootstrap: [AppComponent],
   providers: [BackendService]

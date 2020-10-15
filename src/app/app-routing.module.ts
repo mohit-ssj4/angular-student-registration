@@ -1,6 +1,6 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
-import { CovidTableComponent } from "./covid-table/covid-table.component";
+import { CovidtableComponent } from "./covidtable/covidtable.component";
 import { LoginComponent } from "./login/login.component";
 import { RegisterComponent } from "./register/register.component";
 
@@ -15,7 +15,7 @@ const routes: Routes = [
   },
   {
     path: "covid-table",
-    component: CovidTableComponent
+    component: CovidtableComponent
   }
 ];
 
