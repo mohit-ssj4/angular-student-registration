@@ -10,8 +10,8 @@ import { BackendService } from "../backend.service";
 export class LoginComponent implements OnInit {
   constructor(private backend: BackendService, private router: Router) {}
 
-  student_no: number;
-  password: string;
+  student_no: number = null;
+  password: string = null;
   formData: any;
   displayLoader = false;
   failure = false;
